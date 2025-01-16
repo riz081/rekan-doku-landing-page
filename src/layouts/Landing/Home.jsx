@@ -1,6 +1,6 @@
 import React from 'react';
-import Constants from '../utils/Constants';
-import { Hero, WhatsApp, Bubble } from '../assets';
+import Constants from '../../utils/Constants';
+import { Hero, WhatsApp, Bubble } from '../../assets';
 import { IoClose } from 'react-icons/io5';
 
 const Home = () => {

@@ -4,13 +4,16 @@ import { UsingBanner, Check } from '../../../assets';
 
 const featureData = [
   {
-    title: 'Resmi dan Legal',
+    title: 'Surat Perjanjian',
   },
   {
-    title: 'Cepat dan Praktis',
+    title: 'NDA (Non-Disclosure Agreement)',
   },
   {
-    title: 'Aman dan Terlacak',
+    title: 'Persetujuan Proyek',
+  },
+  {
+    title: 'Dokumen Internal Perusahaan',
   }
 ];
 
@@ -38,7 +41,7 @@ const Using = () => {
                   color: Constants.colors.ocean,
                 }}
               >
-                e-Materai:
+                e-Sign
               </span>
               {` `} Pada Jenis Dokumen Bisnis Anda
             </h4>
@@ -74,6 +77,25 @@ const Using = () => {
               </li>
             ))}
           </ul>
+
+          {/* Button Section */}
+          <div className="flex flex-wrap gap-4 justify-center md:justify-start mt-5">
+            <button
+              className="flex items-center justify-center gap-3 bg-white text-[#5B59E8] font-medium w-full sm:w-[270px] h-[55px] px-8 rounded-[14px] border border-[#5B59E8] transition"
+            >
+              <span className="font-montserrat text-lg">
+                Bubuhkan Dokumen
+              </span>
+            </button>
+
+            <button
+              className="flex items-center justify-center bg-gradient-to-r from-[#B964FF] to-[#2154D5] text-white font-medium w-full sm:w-[270px] h-[55px] px-8 rounded-[14px] transition"
+            >
+              <span className="font-montserrat text-lg">
+                Beli e-Sign
+              </span>
+            </button>
+          </div>
         </div>
 
         {/* Right Column - Content */}

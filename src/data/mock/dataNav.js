@@ -30,14 +30,14 @@ export const NavbarMenu = [
         title: "e-Materai + Sign",
         icon: MateraiSign,
         desc: 'Integrasi e-Materai dan Tanda Tangan Digital',
-        link: "/doku-stamp/fitur3"
+        link: "/doku-stamp/e-sign-materai"
       },
       {
         id: 4,
         title: "Corporate Business",
         icon: CorporateBusiness,
         desc: 'Rekan Doku dengan workflow perusahaan',
-        link: "/doku-stamp/fitur4"
+        link: "/doku-stamp/corporate-business"
       },
     ],
   },

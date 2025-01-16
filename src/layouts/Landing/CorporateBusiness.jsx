@@ -1,18 +1,17 @@
 import React from 'react';
-import Constants from '../utils/Constants';
-import { EMateraiHero, WhatsApp } from '../assets';
+import Constants from '../../utils/Constants';
+import { HeroBusiness } from '../../assets';
 
-const EMaterai = () => {
+const CorporateBusiness = () => {
   return (
     <div className="container mx-auto px-4 sm:px-6 md:px-12 py-4 min-h-screen flex flex-col md:grid md:grid-cols-2 gap-8 items-center translate-y-[-10px] md:translate-y-[-80px]">
       {/* Brand Info */}
       <div className="flex flex-col space-y-6 md:space-y-8 px-4">
         {/* Banner Text */}
         <div
-          className="flex justify-center items-center text-white font-bold py-2 px-4 h-[45px] w-full sm:w-max sm:ml-0"
+          className="flex justify-center items-center text-white font-bold py-2 px-4 h-[45px] w-full sm:w-max sm:ml-0 bg-[#5B59E8]"
           style={{
             borderRadius: '8px',
-            backgroundColor: Constants.colors.ocean,
           }}
         >
           <p
@@ -21,7 +20,7 @@ const EMaterai = () => {
               fontFamily: Constants.fontFamilies.primary,
             }}
           >
-            #e-Materai Rekan Doku
+            #Corporate Business Rekan Doku
           </p>
         </div>
 
@@ -36,16 +35,15 @@ const EMaterai = () => {
               letterSpacing: '0.5%',
             }}
           >
-            Pakai {` `}
             <span
               style={{
                 fontWeight: Constants.weight.bold,
                 color: Constants.colors.ocean,
               }}
             >
-              e-Materai
+              Corporate Business:
             </span>
-            {` `}Dengan Mudah dan Praktis
+            {` `}Solusi Lengkap untuk Bisnis Skala Besar
           </h1>
 
           <p
@@ -58,10 +56,8 @@ const EMaterai = () => {
               color: Constants.colors.black,
             }}
           >
-            Kami adalah salah satu distibutor resmi e-materai yang telah diakui oleh PERURI. 
-            Bubuhkan dokumen digital Anda dengan e-Materai Rekan Doku. 
-            Dengan e-Meterai Rekan Doku, dokumen Anda memiliki kekuatan hukum yang sah dan diakui oleh negara. 
-            Proses penempelan meterai elektronik menjadi cepat, aman, dan dapat dilakukan kapan saja tanpa perlu cetak fisik.
+            RekanDoku menyediakan solusi komprehensif bagi perusahaan untuk mengelola dan mengamankan dokumen digital dalam skala besar. 
+            Dengan fitur e-Meterai, e-Sign, dan manajemen dokumen terpusat, semua proses berjalan lebih efisien dan aman.
           </p>
         </div>
 
@@ -79,7 +75,7 @@ const EMaterai = () => {
             className="flex items-center justify-center bg-gradient-to-r from-[#B964FF] to-[#2154D5] text-white font-medium w-full sm:w-[270px] h-[55px] px-8 rounded-[14px] transition"
           >
             <span className="font-montserrat text-lg">
-              Beli e-Materai
+              Coba Gratis Sekarang
             </span>
           </button>
         </div>
@@ -89,7 +85,7 @@ const EMaterai = () => {
       <div className="relative mt-8 md:mt-0 flex justify-center">        
         {/* Main Image */}
         <img
-          src={EMateraiHero}
+          src={HeroBusiness}
           alt="Illustration"
           className="max-w-full w-[90%] sm:w-[75%] mx-auto"
         />
@@ -98,4 +94,4 @@ const EMaterai = () => {
   );
 };
 
-export default EMaterai;
+export default CorporateBusiness;

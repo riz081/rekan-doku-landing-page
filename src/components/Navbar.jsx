@@ -16,6 +16,8 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [user, setUser] = useState(null); // Status untuk menyimpan informasi pengguna yang login
+  const [profileDropdownOpen, setProfileDropdownOpen] = useState(false); // Status untuk mengelola dropdown profil
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,12 +34,24 @@ const Navbar = () => {
       if (dropdownOpen && !event.target.closest('.nav-item')) {
         setDropdownOpen(null);
       }
+      if (profileDropdownOpen && !event.target.closest('.profile-dropdown')) {
+        setProfileDropdownOpen(false);
+      }
     };
     document.addEventListener('click', handleClickOutside);
     return () => {
       document.removeEventListener('click', handleClickOutside);
     };
-  }, [dropdownOpen]);
+  }, [dropdownOpen, profileDropdownOpen]);
+
+  useEffect(() => {
+    // Simulasi mendapatkan informasi pengguna yang login
+    const loggedInUser = {
+      name: 'John Doe',
+      email: 'john.doe@example.com',
+    };
+    setUser(loggedInUser);
+  }, []);
 
   const handleMenuClick = (menu) => {
     if (menu.children) {
@@ -51,6 +65,10 @@ const Navbar = () => {
 
   const handleDropdownClose = () => {
     setDropdownOpen(null);
+  };
+
+  const handleProfileClick = () => {
+    setProfileDropdownOpen(!profileDropdownOpen);
   };
 
   return (
@@ -95,7 +113,7 @@ const Navbar = () => {
                     {menu.title}
                     {menu.children && (
                       <FaChevronDown
-                        className={`ml-1 text-sm text-gray-500 transition-transform duration-200 ${
+                        className={`ml-1 text-sm text-[#112C6F] transition-transform duration-200 ${
                           dropdownOpen === menu.id ? 'rotate-180' : ''
                         }`}
                       />
@@ -113,23 +131,64 @@ const Navbar = () => {
           </div>
 
           <div className="items-center gap-4 hidden md:flex">
-            <Button
-              text="Masuk"
-              variant="default"
-              size="medium"
-              style={{ borderColor: Constants.colors.darkBlue }}
-              onClick={() => alert('Masuk clicked')}
-              isHidden={false}
-            />
+            {user ? (
+              <div className="relative profile-dropdown">
+                <button
+                  onClick={handleProfileClick}
+                  className="text-[16px] font-[700] focus:outline-none pr-6 flex items-center"
+                  style={{ fontFamily: Constants.fontFamilies.primary, lineHeight: '19.2px', letterSpacing: '0.05%' }}
+                >
+                  Hi, {user.name || user.email}
+                  <FaChevronDown
+                    className={`ml-1 text-sm text-[#112C6F] transition-transform duration-200 ${
+                      profileDropdownOpen ? 'rotate-180' : ''
+                    }`}
+                  />
+                </button>
+                {profileDropdownOpen && (
+                  <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg">
+                    <ul className="py-1">
+                      <li>
+                        <button
+                          onClick={() => navigate('/profile')}
+                          className="block px-4 py-2 text-gray-700 hover:bg-gray-100 w-full text-left"
+                        >
+                          Profile
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          onClick={() => navigate('/logout')}
+                          className="block px-4 py-2 text-gray-700 hover:bg-gray-100 w-full text-left"
+                        >
+                          Logout
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <>
+                <Button
+                  text="Masuk"
+                  variant="default"
+                  size="medium"
+                  style={{ borderColor: Constants.colors.darkBlue }}
+                  onClick={() => navigate('/auth-login')}
+                  isHidden={false}
+                />
 
-            <Button
-              text="Coba Gratis Sekarang"
-              variant="primary"
-              size="medium"
-              style={{ borderColor: Constants.colors.darkBlue }}
-              onClick={() => alert('Coba Gratis Sekarang clicked')}
-              isHidden={false}
-            />
+                <Button
+                  text="Coba Gratis Sekarang"
+                  variant="primary"
+                  size="medium"
+                  style={{ borderColor: Constants.colors.darkBlue }}
+                  onClick={() => alert('Coba Gratis Sekarang clicked')}
+                  isHidden={false}
+                />
+              </>
+            )}
           </div>
 
           <div className="md:hidden" onClick={() => setOpen(!open)}>

@@ -4,8 +4,8 @@ const StepProgress = () => {
   const steps = [
     { id: 1, label: 'Masuk ke Platform Rekan Doku' },
     { id: 2, label: 'Unggah Dokumen' },
-    { id: 3, label: 'Tambahkan Tanda Tangan digital (e-Sign)' },
-    { id: 4, label: 'Penempatan Otomatis' },
+    { id: 3, label: 'Tandatangani Secara Digital (e-Sign)' },
+    { id: 4, label: 'Tempelkan e-Meterai ' },
     { id: 5, label: 'Unduh Dokumen' },
   ];
 
@@ -14,10 +14,10 @@ const StepProgress = () => {
       {/* Title */}
       <div className="text-center mb-8 md:mb-16 px-4">
         <h2 className="text-xl md:text-2xl font-[600] text-[Montserrat] text-[32px] text-[#212121]">
-          Proses dan Tata Cara Penggunaan <span className="text-[#5B59E8] font-[600]">e-Sign</span>
+          Proses dan Tata Cara Penggunaan <span className="text-[#5B59E8] font-[600]">e-Sign + e-Materai</span>
         </h2>
         <p className="text-[#212121] text-[Montserrat] mt-2 text-[16px] font-[400] md:text-base">
-          Tidak perlu lagi mencari meterai fisik. Dalam beberapa klik, dokumen Anda akan memiliki tanda tangan elektronik yang sah.
+          Tidak perlu lagi mencari meterai fisik. Dalam beberapa klik, dokumen Anda akan memiliki dua keabsahan elektronik yang sah.
         </p>
       </div>
 

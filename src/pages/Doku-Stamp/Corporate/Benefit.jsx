@@ -1,19 +1,19 @@
 import React from 'react';
 import Constants from '../../../utils/Constants';
-import { BenefitBanner2, Check } from '../../../assets';
+import { BenefitBusiness, Check } from '../../../assets';
 
 const featureData = [
   {
-    title: 'Kekuatan Hukum Penuh',
-    desc: 'Tanda tangan elektronik diakui secara resmi dan mengikat di mata hukum.'
+    title: 'Platform Terintegrasi',
+    desc: 'Semua kebutuhan dokumen, dari autentikasi hingga penyimpanan, berada dalam satu sistem.'
   },
   {
-    title: 'Efisiensi Tanpa Batas',
-    desc: 'Tanda tangan dokumen kapan saja dan di mana saja, tanpa perlu hadir fisik.'
+    title: 'Skalabilitas Tinggi',
+    desc: 'Cocok untuk bisnis dengan volume dokumen besar dan proses administrasi kompleks.'
   },
   {
-    title: 'Integrasi Mudah',
-    desc: 'Dapat dihubungkan dengan sistem manajemen dokumen dan platform bisnis lainnya.'
+    title: 'Dukungan Penuh',
+    desc: 'Tim RekanDoku siap membantu implementasi dan operasional untuk perusahaan Anda.'
   }
 ];
 
@@ -24,7 +24,7 @@ const Benefit = () => {
       <div className="container mx-auto text-center">
         {/* Judul dan Deskripsi */}
         <h1 className="mb-4 text-xl sm:text-2xl md:text-[32px] font-[600] leading-snug">
-          Keunggulan e-Sign{' '}
+          Keunggulan Corporate Business{' '}
           <span className="font-bold text-[#5B59E8]">
             Rekan Doku
           </span>
@@ -32,8 +32,7 @@ const Benefit = () => {
 
         <div className="px-2 sm:px-6 md:px-36">
           <p className="mb-12 text-sm sm:text-[18px] font-[Montserrat] font-[400] leading-relaxed">
-            Dengan e-Sign RekanDoku, Anda dapat menandatangani dokumen secara digital dengan legalitas yang diakui. 
-            Proses ini mempercepat administrasi tanpa mengorbankan keamanan dan akurasi.
+            Dengan e-Sign _e-Meterai RekanDoku, Anda dapat Kelola, tandatangani, dan meterai dokumen secara digital dalam satu ekosistem yang terintegrasi.
           </p>
         </div>
 
@@ -42,7 +41,7 @@ const Benefit = () => {
         {/* Left Column - Image with Notification */}
         <div className="col-span-1 sm:col-span-5 relative flex justify-center items-center">
           <img
-            src={BenefitBanner2}
+            src={BenefitBusiness}
             alt="Main Image"
             className="w-[280px] sm:w-[320px] md:w-[548px] h-auto sm:h-[500px] md:h-[436px] object-contain"
           />
@@ -66,9 +65,9 @@ const Benefit = () => {
                   color: Constants.colors.ocean,
                 }}
               >
-                e-Sign:
+                Corporate Business:
               </span>
-              {` `}Solusi e-Sign untuk Semua Kebutuhan
+              {` `}Layanan Premium untuk Kebutuhan Korporat
             </h4>
           </div>
 

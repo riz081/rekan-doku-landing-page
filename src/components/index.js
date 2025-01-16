@@ -5,7 +5,10 @@ import Logo from "./Logo";
 import Navbar from "./Navbar";
 import ResponsiveMenu from "./ResponsiveMenu";
 import WhatsAppButton from "./WhatsAppButton";
-import ScrollUpButton from "./ScrollUpButton"
+import ScrollUpButton from "./ScrollUpButton";
+import Quota from "./Quota";
+import NavigationTabs from "./NavigationTabs";
+import { generateQuota } from "./Quota";
 
 
 export {
@@ -17,4 +20,7 @@ export {
     ResponsiveMenu,
     WhatsAppButton,
     ScrollUpButton,
+    Quota,
+    NavigationTabs,
+    generateQuota
 }

@@ -1,18 +1,17 @@
 import React from 'react';
-import Constants from '../utils/Constants';
-import { ESignHero } from '../assets';
+import Constants from '../../utils/Constants';
+import { SignMateraiHero } from '../../assets';
 
-const ESign = () => {
+const ESignMaterai = () => {
   return (
     <div className="container mx-auto px-4 sm:px-6 md:px-12 py-4 min-h-screen flex flex-col md:grid md:grid-cols-2 gap-8 items-center translate-y-[-10px] md:translate-y-[-80px]">
       {/* Brand Info */}
       <div className="flex flex-col space-y-6 md:space-y-8 px-4">
         {/* Banner Text */}
         <div
-          className="flex justify-center items-center text-white font-bold py-2 px-4 h-[45px] w-full sm:w-max sm:ml-0"
+          className="flex justify-center items-center text-white font-bold py-2 px-4 h-[45px] w-full sm:w-max sm:ml-0 bg-[#5B59E8]"
           style={{
             borderRadius: '8px',
-            backgroundColor: Constants.colors.ocean,
           }}
         >
           <p
@@ -21,7 +20,7 @@ const ESign = () => {
               fontFamily: Constants.fontFamilies.primary,
             }}
           >
-            #e-Sign Rekan Doku
+            #e-Materai + e-Sign Rekan Doku
           </p>
         </div>
 
@@ -42,9 +41,9 @@ const ESign = () => {
                 color: Constants.colors.ocean,
               }}
             >
-              e-Sign
+              e-Materai + e-Sign:
             </span>
-            {` `}Tanda Tangan Digital yang Legal dan Aman
+            {` `}Autentikasi Dokumen Lengkap dalam Satu Platform
           </h1>
 
           <p
@@ -57,9 +56,8 @@ const ESign = () => {
               color: Constants.colors.black,
             }}
           >
-            Rekan Doku memungkinkan Anda menandatangani dokumen secara elektronik kapan saja dan di mana saja, tanpa mengorbankan keamanan atau keabsahan. 
-            Dengan enkripsi canggih dan verifikasi berlapis, setiap tanda tangan dijamin sah dan diakui oleh lembaga resmi. 
-            Proses ini tidak hanya mempercepat alur kerja, tetapi juga memberikan perlindungan maksimal terhadap dokumen penting Anda.
+            RekanDoku menghadirkan solusi menyeluruh dengan integrasi e-Meterai dan e-Sign dalam satu platform. 
+            Kombinasi ini memastikan dokumen tidak hanya memiliki tanda tangan digital yang sah, tetapi juga distempel dengan meterai elektronik resmi, memberikan legalitas ganda yang diakui pemerintah.
           </p>
         </div>
 
@@ -77,7 +75,7 @@ const ESign = () => {
             className="flex items-center justify-center bg-gradient-to-r from-[#B964FF] to-[#2154D5] text-white font-medium w-full sm:w-[270px] h-[55px] px-8 rounded-[14px] transition"
           >
             <span className="font-montserrat text-lg">
-              Beli e-Sign
+              e-Sign + e-Materai
             </span>
           </button>
         </div>
@@ -87,7 +85,7 @@ const ESign = () => {
       <div className="relative mt-8 md:mt-0 flex justify-center">        
         {/* Main Image */}
         <img
-          src={ESignHero}
+          src={SignMateraiHero}
           alt="Illustration"
           className="max-w-full w-[90%] sm:w-[75%] mx-auto"
         />
@@ -96,4 +94,4 @@ const ESign = () => {
   );
 };
 
-export default ESign;
+export default ESignMaterai;

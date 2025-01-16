@@ -22,19 +22,19 @@ const StepProgress = () => {
       </div>
 
       {/* Progress Bar Container */}
-      <div className="relative w-full overflow-x-auto pb-8">
+      <div className="relative w-full overflow-x-auto pb-32 mt-16"> {/* Added mt-16 for downward shift */}
         <div className="min-w-[1000px] md:min-w-full relative mx-auto max-w-6xl">
           {/* Line */}
           <div className="absolute top-[30px] md:top-10 left-1/2 transform -translate-x-1/2 w-[90%] h-[17px] bg-[#67C15E]"></div>
 
           {/* Steps */}
-          <div className="flex justify-between items-center px-8 md:px-12">
+          <div className="flex justify-between gap-16 px-8 md:px-12">
             {steps.map((step) => (
               <div key={step.id} className="flex flex-col items-center">
-                <div className="w-[60px] h-[60px] md:w-[100px] md:h-[100px] bg-[#A162F9] text-white flex items-center justify-center rounded-full text-3xl md:text-[64px] font-[600] text-[Montserrat] z-10 translate-y-0">
+                <div className="w-[60px] h-[60px] md:w-[100px] md:h-[100px] bg-[#A162F9] text-white flex items-center justify-center rounded-full text-3xl md:text-[64px] font-[600] text-[Montserrat] z-10">
                   {step.id}
                 </div>
-                <p className="text-[Montserrat] text-[#212121] text-center mt-4 text-[20px] font-[500] md:text-sm w-[100px] md:w-[120px]">
+                <p className="relative top-[10px] md:top-[12px] text-[Montserrat] text-[#212121] text-center text-[20px] font-[500] md:text-sm w-[100px] md:w-[120px]">
                   {step.label}
                 </p>
               </div>
@@ -42,6 +42,7 @@ const StepProgress = () => {
           </div>
         </div>
       </div>
+
     </div>
   );
 };

@@ -1,16 +1,19 @@
 import React from 'react';
 import Constants from '../../../utils/Constants';
-import { UsingBanner, Check } from '../../../assets';
+import { UsageBusiness, Check } from '../../../assets';
 
 const featureData = [
   {
-    title: 'Resmi dan Legal',
+    title: 'Kontrak Massal',
   },
   {
-    title: 'Cepat dan Praktis',
+    title: 'Pengelolaan Dokumen Internal',
   },
   {
-    title: 'Aman dan Terlacak',
+    title: 'Arsip Digital Perusahaaan',
+  },
+  {
+    title: 'Tender dan Proyek Besar',
   }
 ];
 
@@ -38,7 +41,7 @@ const Using = () => {
                   color: Constants.colors.ocean,
                 }}
               >
-                e-Materai
+                Corporate Business
               </span>
               {` `} Pada Jenis Dokumen Bisnis Anda
             </h4>
@@ -89,7 +92,7 @@ const Using = () => {
               className="flex items-center justify-center bg-gradient-to-r from-[#B964FF] to-[#2154D5] text-white font-medium w-full sm:w-[270px] h-[55px] px-8 rounded-[14px] transition"
             >
               <span className="font-montserrat text-lg">
-                Beli e-Materai
+                Coba Gratis Sekarang
               </span>
             </button>
           </div>
@@ -98,7 +101,7 @@ const Using = () => {
         {/* Right Column - Content */}
         <div className="col-span-1 sm:col-span-5 relative flex justify-center items-center">
           <img
-            src={UsingBanner}
+            src={UsageBusiness}
             alt="Main Image"
             className="w-[280px] sm:w-[320px] md:w-[548px] h-auto sm:h-[500px] md:h-[436px] object-contain"
           />
